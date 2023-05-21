@@ -13,6 +13,7 @@
   align-items: center;
   color: #ff9f00;
   margin: 0 25px;
+  cursor: pointer;
 }
 
 .header__logoImage {
@@ -75,6 +76,7 @@
   color: white;
   margin-right: 50px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .nav__basketCount {
