@@ -5,9 +5,12 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
+import { useStateValue } from './StateProvider'
 
 function Header() {
   const navigate = useNavigate()
+  const [{basket}, dispatch] = useStateValue();
+
   return (
     <div className="header">
       <div className="header__logo" onClick={() => navigate('/')}>
@@ -33,7 +36,7 @@ function Header() {
 
         <div className="nav__itemBasket" onClick={() => navigate('/checkout')}>
           <ShoppingBasketIcon/>
-          <span className="nav__itemLineTw nav__basketCount">0</span>
+          <span className="nav__itemLineTw nav__basketCount">{ basket.length }</span>
         </div>
       </div>
     </div>
