@@ -13,7 +13,7 @@ function Header() {
 
   return (
     <div className="header">
-      <div className="header__logo" onClick={() => navigate('/')}>
+      <div className="header__logo header__link" onClick={() => navigate('/')}>
         <StorefrontIcon className="header__logoImage" fontSize="large"/>
         <h2 className="header__logoTitle">eShop</h2>
       </div>
@@ -24,7 +24,7 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <div className="nav__item">
+        <div className="link nav__item header__link" onClick={() => navigate('/login')}>
           <span className="nav__itemLineOne">Hello Guest</span>
           <span className="nav__itemLineTwo">Sign In</span>
         </div>
